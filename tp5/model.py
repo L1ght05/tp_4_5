@@ -39,5 +39,5 @@ class UserModel:
 
     @staticmethod
     def is_valid_password(password):
-        """At least 6 chars and one digit"""
+        
         return len(password) >= 6 and re.search(r'\d', password)

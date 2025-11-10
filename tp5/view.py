@@ -5,7 +5,6 @@ class LoginView:
     def __init__(self, controller):
         self.controller = controller
 
-        # Login window
         self.root = tk.Tk()
         self.root.title("Login System (MVC Example)")
         self.root.geometry("300x260")
@@ -18,7 +17,6 @@ class LoginView:
         self.password_entry = tk.Entry(self.root, show="*")
         self.password_entry.pack()
 
-        # Show/Hide checkbox (Exercise 1)
         self.show_password_var = tk.BooleanVar()
         tk.Checkbutton(
             self.root,
@@ -33,7 +31,6 @@ class LoginView:
         self.message_label = tk.Label(self.root, text="", fg="blue")
         self.message_label.pack(pady=10)
 
-        # Welcome window reference
         self.welcome_window = None
 
     def toggle_password_visibility(self):
@@ -53,7 +50,6 @@ class LoginView:
         self.toggle_password_visibility()
         self.show_message("")
 
-    # ======== NEW: Welcome Window (Exercise 3) ========
     def open_welcome_window(self, username):
         self.welcome_window = tk.Toplevel(self.root)
         self.welcome_window.title("Welcome")
